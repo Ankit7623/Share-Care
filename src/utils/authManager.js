@@ -3,7 +3,7 @@
 
 const TOKEN_KEY = 'sharecare_token';
 const USER_KEY = 'sharecare_user';
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = '/api/auth';
 
 /**
  * Validate email format
