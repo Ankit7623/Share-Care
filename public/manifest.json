@@ -1,0 +1,18 @@
+{
+  "name": "ShareCare Platform",
+  "short_name": "ShareCare",
+  "description": "Smart Donation Platform connecting donors and seekers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#00d2ff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

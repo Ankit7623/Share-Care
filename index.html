@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ShareCare - Smart Donation Platform</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    
+    <!-- PWA Installation -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00d2ff">
+    <link rel="apple-touch-icon" href="/pwa-icon.svg">
+  </head>
+  <body>
+    <!-- App Wrapper mimicking a mobile device on larger screens -->
+    <div id="app-container">
+      
+      <!-- Push-style Toasts at top level of app -->
+      <div id="toast-container" style="position: absolute; top: 10px; width: 100%; padding: 0 16px; pointer-events: none; z-index: 2000; transition: all 0.5s ease;"></div>
+      
+      <!-- Dynamic SPA views injected here -->
+      <main id="app"></main>
+      
+      <!-- Bottom Navigation (Hidden on Splash/Auth) -->
+      <nav id="bottom-nav" class="hidden">
+        <a href="#home" class="nav-item active" data-target="home">
+          <span class="material-icons-round">home</span>
+          <span>Home</span>
+        </a>
+        <a href="#alerts" class="nav-item" data-target="alerts">
+          <div class="icon-wrapper">
+             <span class="material-icons-round">notifications</span>
+             <span class="badge" id="nav-badge-alerts">!</span>
+          </div>
+          <span>Alerts</span>
+        </a>
+        <!-- Add Button (FAB) nested in middle -->
+        <a href="#add-donation" class="nav-item add-fab" data-target="add-donation">
+          <div class="fab-wrapper">
+            <span class="material-icons-round">add</span>
+          </div>
+        </a>
+        <a href="#chat" class="nav-item" data-target="chat">
+          <span class="material-icons-round">chat</span>
+          <span>Chat</span>
+        </a>
+        <a href="#profile" class="nav-item" data-target="profile">
+          <span class="material-icons-round">person</span>
+          <span>Profile</span>
+        </a>
+      </nav>
+      
+      <!-- Mono AI Floating Button -->
+      <button id="mono-ai-fab" class="hidden">
+        <span class="material-icons-round">smart_toy</span>
+      </button>
+
+    </div>
+
+    <!-- Main JavaScript Application -->
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/router.js"></script>
+    <!-- Map will be initialized later -->
+  </body>
+</html>
